@@ -18,7 +18,7 @@ db = require('./config/keys.js').mongoURI;
 
 mongoose.connect(db,{useUnifiedTopology: true, useNewUrlParser: true }).then(() => console.log('Mongo Connected')).catch( err => console.log(err));
 // serve static assets in production
-if(process.env.node_env === 'production'){
+if(process.env.NODE_ENV === 'production'){
     //set static folder
     app.use(express.static('client/build'))
 
