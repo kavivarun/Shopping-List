@@ -4,6 +4,7 @@
   "description": "a shopping list using mern stack",
   "main": "server.js",
   "scripts": {
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION = false npm install --prefx client && npm run build -- prefix client",
     "client-install":"npm install --prefix client",
     "start":"node server.js",
     "server":"nodemon server.js",
